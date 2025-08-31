@@ -220,7 +220,7 @@ class _PinputState extends State<Pinput>
       case TargetPlatform.windows:
       case TargetPlatform.fuchsia:
       case TargetPlatform.android:
-      case defaultTargetPlatform == TargetPlatform.ohos:
+      case TargetPlatform.ohos:
         if (cause == SelectionChangedCause.longPress ||
             cause == SelectionChangedCause.drag) {
           _editableText?.bringIntoView(selection.extent);
@@ -232,7 +232,7 @@ class _PinputState extends State<Pinput>
       case TargetPlatform.iOS:
       case TargetPlatform.fuchsia:
       case TargetPlatform.android:
-      case defaultTargetPlatform == TargetPlatform.ohos:
+      case TargetPlatform.ohos:
         break;
       case TargetPlatform.macOS:
       case TargetPlatform.linux:
@@ -311,7 +311,7 @@ class _PinputState extends State<Pinput>
         break;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
-      case defaultTargetPlatform == TargetPlatform.ohos:
+      case TargetPlatform.ohos:
         forcePressEnabled = false;
         textSelectionControls ??= materialTextSelectionHandleControls;
         break;

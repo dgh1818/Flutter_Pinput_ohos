@@ -44,7 +44,7 @@ class _PinputSelectionGestureDetectorBuilder
         case TargetPlatform.fuchsia:
         case TargetPlatform.linux:
         case TargetPlatform.windows:
-        case defaultTargetPlatform == TargetPlatform.ohos:
+        case TargetPlatform.ohos:
           Feedback.forLongPress(_state.context);
       }
     }
