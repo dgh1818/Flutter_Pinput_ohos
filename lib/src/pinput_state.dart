@@ -1,5 +1,7 @@
 part of 'pinput.dart';
 
+import 'package:flutter/foundation.dart';
+
 /// This allows a value of type T or T?
 /// to be treated as a value of type T?.
 ///
@@ -219,6 +221,7 @@ class _PinputState extends State<Pinput>
       case TargetPlatform.windows:
       case TargetPlatform.fuchsia:
       case TargetPlatform.android:
+      case defaultTargetPlatform == TargetPlatform.ohos:
         if (cause == SelectionChangedCause.longPress ||
             cause == SelectionChangedCause.drag) {
           _editableText?.bringIntoView(selection.extent);
@@ -230,6 +233,7 @@ class _PinputState extends State<Pinput>
       case TargetPlatform.iOS:
       case TargetPlatform.fuchsia:
       case TargetPlatform.android:
+      case defaultTargetPlatform == TargetPlatform.ohos:
         break;
       case TargetPlatform.macOS:
       case TargetPlatform.linux:
@@ -308,6 +312,7 @@ class _PinputState extends State<Pinput>
         break;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
+      case defaultTargetPlatform == TargetPlatform.ohos:
         forcePressEnabled = false;
         textSelectionControls ??= materialTextSelectionHandleControls;
         break;

@@ -1,5 +1,7 @@
 part of '../pinput.dart';
 
+import 'package:flutter/foundation.dart';
+
 class _PinputSelectionGestureDetectorBuilder
     extends TextSelectionGestureDetectorBuilder {
   _PinputSelectionGestureDetectorBuilder({required _PinputState state})
@@ -42,6 +44,7 @@ class _PinputSelectionGestureDetectorBuilder
         case TargetPlatform.fuchsia:
         case TargetPlatform.linux:
         case TargetPlatform.windows:
+        case defaultTargetPlatform == TargetPlatform.ohos:
           Feedback.forLongPress(_state.context);
       }
     }
