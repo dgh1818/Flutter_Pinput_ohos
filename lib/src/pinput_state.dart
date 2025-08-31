@@ -1,6 +1,5 @@
 part of 'pinput.dart';
 
-import 'package:flutter/foundation.dart';
 
 /// This allows a value of type T or T?
 /// to be treated as a value of type T?.

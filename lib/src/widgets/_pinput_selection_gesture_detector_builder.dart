@@ -1,6 +1,6 @@
 part of '../pinput.dart';
 
-import 'package:flutter/foundation.dart';
+
 
 class _PinputSelectionGestureDetectorBuilder
     extends TextSelectionGestureDetectorBuilder {
